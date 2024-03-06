@@ -165,7 +165,7 @@ function prayersTimes() {
             :
             ${
                 prayersTimesData.data.timings.Dhuhr.split(":")[0] > 12 ? 
-                prayersTimesData.data.timings.Dhuhr.split(":")[0] % 12 : 
+                "0" + prayersTimesData.data.timings.Dhuhr.split(":")[0] % 12 : 
                 prayersTimesData.data.timings.Dhuhr.split(":")[0]
             }
         `;
@@ -175,7 +175,7 @@ function prayersTimes() {
             :
             ${
                 prayersTimesData.data.timings.Asr.split(":")[0] > 12 ? 
-                prayersTimesData.data.timings.Asr.split(":")[0] % 12 : 
+                "0" + prayersTimesData.data.timings.Asr.split(":")[0] % 12 : 
                 prayersTimesData.data.timings.Asr.split(":")[0]
             }
         `;
@@ -185,7 +185,7 @@ function prayersTimes() {
             :
             ${
                 prayersTimesData.data.timings.Maghrib.split(":")[0] > 12 ? 
-                prayersTimesData.data.timings.Maghrib.split(":")[0] % 12 : 
+                "0" + prayersTimesData.data.timings.Maghrib.split(":")[0] % 12 : 
                 prayersTimesData.data.timings.Maghrib.split(":")[0]
             }
         `;
@@ -195,7 +195,7 @@ function prayersTimes() {
             :
             ${
                 prayersTimesData.data.timings.Isha.split(":")[0] > 12 ? 
-                prayersTimesData.data.timings.Isha.split(":")[0] % 12 : 
+                "0" + prayersTimesData.data.timings.Isha.split(":")[0] % 12 : 
                 prayersTimesData.data.timings.Isha.split(":")[0]
             }
             `;
