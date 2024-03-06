@@ -102,7 +102,7 @@ function getCountriesAndCites(country) {
 // get all methods-----------------
 function methods() {
     let methodsRequest = new Promise((resolve , reject) => {
-        fetch("http://api.aladhan.com/v1/methods")
+        fetch("https://api.aladhan.com/v1/methods")
         .then(response => {
             if(response.ok) resolve(response.json());
             else reject(`Error : can't fetch methodes , status => ${response.status}`);
