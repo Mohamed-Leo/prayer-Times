@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  font-family: "Cairo", sans-serif;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+}
+.container .info-container {
+  padding: 1em 5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.container .info-container .box {
+  color: #fff;
+  background-color: rgba(19, 104, 104, 0.6784313725);
+  border-radius: 10px;
+  padding: 1em 2em;
+}
+.container .info-container .country-city-location h1 {
+  font-size: 2.5rem;
+}
+.container .info-container .align-dates {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 25px;
+  flex: 2 0 50%;
+}
+.container .info-container .align-dates .normal-date h3, .container .info-container .align-dates .hijri-date h3 {
+  font-size: 1.5rem;
+}
+.container .prayers-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 1em 5em;
+}
+.container .prayers-boxes .pray-box {
+  color: #fff;
+  background: url("../media/islamic-lantern.jpeg") no-repeat;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+}
+.container .prayers-boxes .pray-box h3, .container .prayers-boxes .pray-box h4 {
+  text-align: center;
+}
+.container .prayers-boxes .pray-box h3 {
+  font-size: 1.5rem;
+}
+.container .prayers-boxes .pray-box h4 {
+  font-size: 2rem;
+  padding-top: 1em;
+}
+.container .prayers-boxes .pray-box h5 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.container .selecting-box {
+  padding: 1em 5em;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.container .selecting-box label {
+  font-size: 2rem;
+}
+.container .selecting-box label select, .container .selecting-box label input {
+  background-color: #16a085;
+  color: #fff;
+  padding: 0.5em 1em;
+  outline: none;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 10px;
+}
+.container .selecting-box label select {
+  width: 200px;
+}
+.container .selecting-box label span {
+  color: #e74c3c;
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .container .prayers-boxes {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 870px) {
+  .container .info-container {
+    padding: 1em 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .container .prayers-boxes {
+    padding: 1em 3em;
+  }
+}
+@media (max-width: 730px) {
+  .container .info-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 568px) {
+  .container .info-container .country-city-location {
+    width: 100%;
+  }
+  .container .info-container .align-dates {
+    flex-direction: column;
+    width: 100%;
+  }
+  .container .info-container .align-dates .box {
+    width: 100%;
+  }
+  .container .selecting-box {
+    padding: 1em 2em;
+  }
+  .container .selecting-box .box {
+    width: 100%;
+  }
+  .container .selecting-box .box select, .container .selecting-box .box input {
+    width: 100%;
+  }
+  .container .prayers-boxes {
+    padding: 1em 2em;
+  }
+  .container .prayers-boxes .pray-box {
+    width: 100%;
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #124140;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+.loader div img {
+  width: 200px;
+  max-width: 400px;
+  display: block;
+}
+.loader div h2 {
+  color: #fff;
+  font-size: 2.5rem;
+}/*# sourceMappingURL=style.css.map */
