@@ -157,8 +157,10 @@ function prayersTimes() {
         // fill prayers times boxes and set the 12 hours formate---------------------
         // Fajr time--------
         document.querySelector('.fair-pray h4').innerHTML = prayersTimesData.data.timings.Fajr;
+        document.querySelector('.fair-pray h4').dataset.prayTime = prayersTimesData.data.timings.Fajr;
         // Sunrise time--------
         document.querySelector('.sunrise-pray h4').innerHTML = prayersTimesData.data.timings.Sunrise;
+        document.querySelector('.sunrise-pray h4').dataset.prayTime = prayersTimesData.data.timings.Sunrise;
         // Dhuhr time--------
         document.querySelector('.dahur-pray h4').innerHTML = `
             ${prayersTimesData.data.timings.Dhuhr.split(":")[1]}
@@ -169,6 +171,7 @@ function prayersTimes() {
                 prayersTimesData.data.timings.Dhuhr.split(":")[0]
             }
         `;
+        document.querySelector('.dahur-pray h4').dataset.prayTime = prayersTimesData.data.timings.Dhuhr;
         // Asr time--------
         document.querySelector('.assr-pray h4').innerHTML =  `
             ${prayersTimesData.data.timings.Asr.split(":")[1]}
@@ -179,6 +182,7 @@ function prayersTimes() {
                 prayersTimesData.data.timings.Asr.split(":")[0]
             }
         `;
+        document.querySelector('.assr-pray h4').dataset.prayTime = prayersTimesData.data.timings.Asr;
         // Maghrib time--------
         document.querySelector('.mahgrib-pray h4').innerHTML =  `
             ${prayersTimesData.data.timings.Maghrib.split(":")[1]}
@@ -189,6 +193,7 @@ function prayersTimes() {
                 prayersTimesData.data.timings.Maghrib.split(":")[0]
             }
         `;
+        document.querySelector('.mahgrib-pray h4').dataset.prayTime = prayersTimesData.data.timings.Maghrib;
         // Isha time--------
         document.querySelector('.issha-pray h4').innerHTML =`
             ${prayersTimesData.data.timings.Isha.split(":")[1]}
@@ -199,13 +204,14 @@ function prayersTimes() {
                 prayersTimesData.data.timings.Isha.split(":")[0]
             }
             `;
+        document.querySelector('.issha-pray h4').dataset.prayTime = prayersTimesData.data.timings.Isha;
 
 
         // change the periodTime in all pray-boxs-------------------------------------------
         let prayBoxes = document.querySelectorAll('.pray-box');
         prayBoxes.forEach(box => {
             // check on every hour to change the periodTime------
-            if(box.children[1].innerHTML.split(":")[0] >= 12) {
+            if(box.children[1].dataset.prayTime.split(":")[0] >= 12) {
                 box.children[2].innerText = 'Pm';
             }
             else {
